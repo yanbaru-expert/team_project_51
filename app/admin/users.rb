@@ -5,8 +5,6 @@ ActiveAdmin.register User do
     selectable_column
     id_column
     column :email
-    column :password
-    column :password_confirmation
     column :created_at
     column :updated_at
     actions
@@ -16,8 +14,6 @@ ActiveAdmin.register User do
     attributes_table do
       row :id
       row :email
-      row :password
-      row :password_confirmation
       row :created_at
       row :updated_at
     end
@@ -34,8 +30,6 @@ ActiveAdmin.register User do
   end
 
   filter :email
-  filter :password
-  filter :password_confirmation
   filter :created_at
   filter :updated_at
 
