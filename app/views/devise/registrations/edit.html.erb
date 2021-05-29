@@ -1,4 +1,4 @@
-<h1><%= t('.title', resource: resource_name.to_s.humanize) %></h1>
+<h1><%= t('.アカウント情報 編集', resource: resource_name.to_s.humanize) %></h1>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= bootstrap_devise_error_messages! %>
@@ -28,10 +28,21 @@
   </div>
 
   <div class="form-group">
-    <%= f.submit t('.update'), class: 'btn btn-primary' %>
+    <%= f.submit t('.update'), class: 'w-100 btn btn-primary' %>
   </div>
+
+  <hr class="my-5">
+
+  <div class="form-group">
+    <%= link_to t('.cancel_my_account'), registration_path(resource_name), data: { confirm: t('.are_you_sure') }, method: :delete, class: 'w-100 btn btn-danger' %>
+  </div>
+
+  <br>
+
+  <div class="form-group">
+    <%= link_to t('.戻る'), :back, class: 'w-100 btn btn-secondary' %>
+  </div>
+
 <% end %>
 
-<p><%= t('.unhappy') %>? <%= link_to t('.cancel_my_account'), registration_path(resource_name), data: { confirm: t('.are_you_sure') }, method: :delete %>.</p>
 
-<%= link_to t('.back'), :back %>
