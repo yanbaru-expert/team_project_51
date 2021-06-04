@@ -3,8 +3,11 @@
     テキスト教材</h1>
   <div class="row">
     <%= render partial: "text", collection: @texts %>
-  <% @texts.each do |text| %>
-    <%= link_to "詳細ページ", text %>
-  <% end %>
+    <% @texts.each do |text| %>
+      <%= link_to "詳細ページ", "/texts/:id" %>
+    <% end %>
+
   </div>
 </div>
+
+
