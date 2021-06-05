@@ -4,6 +4,6 @@ class TextsController < ApplicationController
   end
 
   def show
-    @text = Text.find_by(id: :id)
+    @text = Text.find_by(@texts)
   end
 end
