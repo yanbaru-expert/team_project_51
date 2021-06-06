@@ -2,9 +2,7 @@
   <h1 class="text-center mt-2 mb-4">Ruby/Rails <br class="d-sm-none">
     テキスト教材</h1>
   <div class="row">
-    <%= link_to text_path(@texts) do %>
       <%= render partial: "text", collection: @texts %>
-    <% end %>
   </div>
 </div>
 
