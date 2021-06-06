@@ -19,3 +19,6 @@ ja:
         genre: ジャンル
         title: タイトル
         url: URL
+      read_progress:
+        user: ユーザー
+        text: テキスト教材
