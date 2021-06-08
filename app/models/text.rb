@@ -6,6 +6,10 @@ class Text < ApplicationRecord
     validates :content
   end
 
+  def readed_by?(_user)
+    read_progresses.exists?(user_id: user_id)
+  end
+
   enum genre: {
     invisible: 0,
     basic: 1,
