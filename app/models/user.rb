@@ -1,7 +1,5 @@
 class User < ApplicationRecord
-
-  has_many :watch_progresses
-  has_many :watch_progressed_movies, through: :watch_progresses, source: :movie
+  has_many :watch_progresses, dependent: :destroy
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable

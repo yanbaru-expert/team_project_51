@@ -1,12 +1,14 @@
 class Movie < ApplicationRecord
-
-  has_many :watch_progresses
-  
+  has_many :watch_progresses, dependent: :destroy
 
   with_options presence: true do
     validates :genre
     validates :title
     validates :url
+  end
+
+  def watch_progressed_by?(user)
+    watch_progresses.any? { |watch_progress| watch_progress.user_id == user.id }
   end
 
   enum genre: {
@@ -19,8 +21,4 @@ class Movie < ApplicationRecord
   }
 
   RAILS_GENRE_LIST = %w[basic git ruby rails].freeze
-
-  def watch_progressed_by?(user)
-    watch_progresses.exists?(user_id: user.id)
-  end
 end

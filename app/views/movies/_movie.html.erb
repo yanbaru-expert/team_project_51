@@ -6,13 +6,13 @@
       </div>
     </div>
     <div class="card-body">
-      <div id="movie-<%= movie.id %>" class="btn btn-secondary btn-block">
+      <p id="movie-<%= movie.id %>" >
         <% if movie.watch_progressed_by?(current_user) %>
           <%= render "watch_progress", movie: movie %>
         <% else %>
           <%= render "diswatch_progress", movie: movie %>
         <% end %>
-      </div>
+      </p>
       <p class="card-title mt-3"> Lv.<%= movie_counter + 1 %> : <%= movie.title %></p>
       <p>【<%= movie.genre %>】</p>
     </div>
