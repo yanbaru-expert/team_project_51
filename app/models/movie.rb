@@ -1,6 +1,7 @@
 class Movie < ApplicationRecord
 
   has_many :watch_progresses
+  
 
   with_options presence: true do
     validates :genre
