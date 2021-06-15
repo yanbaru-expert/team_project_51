@@ -3,5 +3,7 @@ class TextsController < ApplicationController
     @texts = Text.where(genre: Text::RAILS_GENRE_LIST)
   end
 
-  def show; end
+  def show
+    @text = Text.find(params[:id])
+  end
 end

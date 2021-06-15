@@ -1,2 +1,4 @@
-<h1>Texts#show</h1>
-<p>Find me in app/views/texts/show.html.erb</p>
+<h1><%= @text.title %></h1>
+<div class="markdown">
+  <%= markdown(@text.content) %>
+</div>
