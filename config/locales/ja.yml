@@ -20,6 +20,9 @@ ja:
         genre: ジャンル
         title: タイトル
         url: URL
+      read_progress:
+        user: ユーザー
+        text: テキスト教材
       watch_progress:
         user: ユーザー
         movie: 動画教材
